@@ -29,7 +29,7 @@ func (a Adapter) Run() {
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%v", a.port))
 
 	if err != nil {
-		log.Fatal("Failed to listen on port %v, error %v", a.port, err)
+		log.Fatalf("Failed to listen on port %v, error %v", a.port, err)
 	}
 
 	grpcServer := grpc.NewServer()
@@ -43,8 +43,8 @@ func (a Adapter) Run() {
 	log.Printf("startomg payment service on port %d ...", a.port)
 
 	if err := grpcServer.Serve(listener); err != nil {
-		log.Fatal("Failed to serve grpc on port %v", a.port)
+		log.Fatalf("Failed to serve grpc on port %v", a.port)
 	}
 
-	log.Println("GRPC Server started on port %v", a.port)
+	log.Printf("GRPC Server started on port %v", a.port)
 }
