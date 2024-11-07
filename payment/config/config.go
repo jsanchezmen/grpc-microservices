@@ -22,7 +22,7 @@ func GetDataSourceURL() string {
 }
 
 func GetApplicationPort() int {
-	portStr := getEnvironmentValue("APPLICATION_PORT")
+	portStr := getEnvironmentValue("PAYMENT_APPLICATION_PORT")
 	port, err := strconv.Atoi(portStr)
 	if err != nil {
 		log.Fatalf("port: %s is invalid", portStr)

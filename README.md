@@ -17,7 +17,7 @@ go get -u github.com/jsanchezmen/microservices-proto/golang/payment@v0.0.2-beta
 
 ```
 grpcurl -d '{"user_id": 123, "items": [{"productCode": "abc123", "unit_price":100.0, "quantity":2}]}' -plaintext localhost:3000 Order/Create
-grpcurl -d '{"user_id": 123, "order_id": 111, "total_price": 222}' -plaintext localhost:3000 Payment/Create
+grpcurl -d '{"user_id": 123, "order_id": 111, "total_price": 222}' -plaintext 127.0.0.1:3001 Payment/Create
 ```
 
 ## Runnig MySql container
@@ -38,7 +38,8 @@ show tables;
 #export DATA_SOURCE_URL={user}:{password}@tcp(127.0.0.1:3306)/{database}
 export DATA_SOURCE_URL=root:root@tcp(127.0.0.1:3306)/microservices
 export ENV=dev
-export APPLICATION_PORT=3000
+export ORDER_APPLICATION_PORT=3000
+export PAYMENT_APPLICATION_PORT=3001
 ```
 
 ## Run app
