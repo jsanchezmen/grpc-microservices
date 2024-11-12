@@ -1,5 +1,9 @@
 # Certificates Creation
 
+## mTLS Flow
+
+![](img/mtls-flow.png)
+
 ## Create CA
 ```
 openssl req -x509 \
@@ -61,3 +65,9 @@ openssl x509 -req -in client/client-req.pem -days 60 -CA ca/ca-cert.pem -CAkey c
 ```
 openssl x509 -in client/client-cert.pem -noout -text
 ```
+
+## grpc TLS config
+
+![](img/grpc-tls-config.png)
+
+- reference: https://github.com/huseyinbabal/grpc-microservices-in-go/blob/main/ch06/listing_6.8/server/server.go
