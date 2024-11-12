@@ -1,6 +1,7 @@
 # GRPC Microservices
 
 This repo is based on https://github.com/huseyinbabal/microservices/tree/main
+Check resilience patterns in grpc here https://github.com/huseyinbabal/grpc-microservices-in-go/tree/main
 
 ## Libraries Used
 
