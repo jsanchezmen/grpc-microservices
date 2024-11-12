@@ -72,7 +72,7 @@ openssl x509 -in client/client-cert.pem -noout -text
 
 - reference: https://github.com/huseyinbabal/grpc-microservices-in-go/blob/main/ch06/listing_6.8/server/server.go
 
-```
+``` go
 package main
 
 import (
